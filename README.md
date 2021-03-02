@@ -1,2 +1,3 @@
 # bgw
-BGW Spammer
+BGW Facebook Page Spammer
+Be careful. 
