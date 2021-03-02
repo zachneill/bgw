@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Form Spammer</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/home.js" charset="utf-8"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<img id="banner" src="images/banner.png" alt="breans-gone-spam">
+  <div class="container">
+    <form>
+      <!-- <h1>BGW Spammer</h1> -->
+      <p id="coax">
+        Auto-spam the BGW anon submission form!
+      </p>
+      <input type="text" class="form-control txt-box" id="sub" name="sub" placeholder="No. of submissions">
+      <textarea rows="4" cols="50" class="form-control txt-box" id="text1" name="text1"placeholder="E.g. Go BGA! Boo BGW!"></textarea>
+<div class="buttons">
+  <button type="button" onclick="sentence(); return false;" id="random" class="btn btn-primary">Random Sentence</button>
+  <button type="button" onclick="loadJoke(); return false;" id="chuck" class="btn btn-primary">Random Chuck Norris Fact</button>
+</div>
+      <p id="post">
+        Don't know what to post? Copy and paste a random sentence or Chuck Norris Fact!
+      </p>
+      <p id="sentence"></p>
+
+      <p id="joke"></p>
+
+      <button id="nextbtn" onclick="displayText(); return false;" class="btn btn-secondary">Next</button>
+
+      <br>
+      <button type="button" onclick="req(1); return false;" id="spam" class="btn btn-info">SPAM</button>
+    </form>
+
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+            <h4 class="modal-title">COMPLETE</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>

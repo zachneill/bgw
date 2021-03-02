@@ -1,0 +1,89 @@
+body {
+  background-color: beige;
+  font-family: Helvetica, serif;
+  font-weight: normal;
+  font-size: 2rem;
+  text-align: left;
+}
+
+img {
+  display: flex;
+  margin: auto;
+  text-align: center;
+  overflow: auto;
+}
+
+#banner {
+  padding-bottom: 2rem;
+  width: 100%;
+}
+
+
+.txt-box {
+  width: 70%;
+  display: flex;
+  text-align: center;
+  margin: 3rem auto;
+}
+
+.form-control {
+  text-align: center;
+}
+
+button {
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+}
+button:hover {
+  background-color: gray;
+}
+
+#sub, #random, #chuck, #nextbtn, #spam, #coax {
+  text-align: center;
+  width: auto;
+  height: auto;
+  font-size: 100%;
+}
+
+#sub, #nextbtn {
+  display: block;
+}
+
+#random, #chuck, #post {
+  visibility: hidden;
+}
+.buttons {
+  margin: auto;
+  text-align: center;
+}
+#text1, #spam {
+  display: none;
+}
+#sub {
+  text-align: left;
+  font-size: 80%;
+}
+#text1 {
+  text-align: left;
+  font-weight: normal;
+}
+
+#post {
+  font-size: 80%;
+  font-weight: 500;
+  text-align: center;
+  padding: 2rem;
+}
+#coax {
+  visibility: visible;
+}
+#nextbtn {
+  padding: 1rem;
+  border: 2px solid black;
+
+}
+#spam {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
