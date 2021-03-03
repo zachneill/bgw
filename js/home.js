@@ -83,28 +83,12 @@ function req(n) {
 
   var da = {};
 
-  var entry = "";
-  var value = "";
-
-  str2 = '#text1';
-
-  da["entry.910209338"] = $(str2).val();
-
-  var total = $('#sub').val();
-  var url = "d/e/1FAIpQLSd5-f6oYEZ2GM_1XiMdOVDDxHNQV8Nx2WB6dyMNhLv82UQJ_w";
-
-  var da1 = {};
-  da1['url'] = url;
-  n -= 1;
-  da1['number'] = n;
-  da1['submissions'] = total;
-  da1['entry'] = entry;
-  da1['value'] = value;
-
-
-  for (var i = 0; i < total; i = i + 1) {
+  for (var i = 0; i < $('#sub').val(); i += 1) {
+    i+=1;
+    da["entry.910209338"] = $('#text1').val()+"\n\nAttempt "+i;
+    i-=1;
     $.ajax({
-      url: "https://docs.google.com/forms/" + url + "/formResponse",
+      url: "https://docs.google.com/forms/d/e/1FAIpQLSd5-f6oYEZ2GM_1XiMdOVDDxHNQV8Nx2WB6dyMNhLv82UQJ_w/formResponse",
       type: "post",
       data: da,
       success: function(data) {}
