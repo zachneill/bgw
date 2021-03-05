@@ -65,16 +65,20 @@ function sentence() {
     " " + verbs[rand4] + conjunctions[rand7] + nouns[rand1] + " " + adverbs[rand1] + " " +
     verbs[rand1] + " " + preposition[rand1] + " a " + adjectives[rand2] + " " + nouns[rand5] + ", which became a " +
     adjectives[rand3] + ", " + adjectives[rand4] + " " + nouns[rand6] + ".";
-  document.getElementById('sentence').innerHTML = content;
+  document.getElementById('text1').innerHTML = content;
 };
 
+function bypassCaptcha() {
+  document.getElementById('i11').classList.add("isCheckedNext");
+  document.getElementById('i11').classList.add("isChecked");
+}
 function loadJoke() {
   $.ajax({
     type: "GET",
     url: "https://api.icndb.com/jokes/random",
     dataType: "json",
     success: function(msg) {
-      $("#joke").html(msg.value.joke);
+      $("#text1").html(msg.value.joke);
     }
   });
 };
@@ -84,9 +88,13 @@ function req(n) {
   var da = {};
 
   for (var i = 0; i < $('#sub').val(); i += 1) {
+
+    da["entry.683312642"] = "Option 3";
     i+=1;
     da["entry.910209338"] = $('#text1').val()+"\n\nAttempt "+i;
     i-=1;
+    da["pageHistory"] = "0,1";
+
     $.ajax({
       url: "https://docs.google.com/forms/d/e/1FAIpQLSd5-f6oYEZ2GM_1XiMdOVDDxHNQV8Nx2WB6dyMNhLv82UQJ_w/formResponse",
       type: "post",
